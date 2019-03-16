@@ -24,7 +24,7 @@
     <link rel="alternate" href="/atom.xml" title="嘀嗒嘀嗒" type="application/atom+xml">
   
   
-    <link rel="icon" href="/images/default-avatar.jpeg">
+    <link rel="icon" href="/images/md_logo.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -88,8 +88,7 @@
     <div class="article-content article-content-doorframe" itemprop="articleBody">
       
       <h3 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h3><p>信息熵是度量样本集合纯度的一种常用指标，假设样本集合$D$中第$k$类样本所占比例为$p_k\;(k=1,2,\cdots,|y|)$，则数据集$D$的信息熵为：</p>
-<p>​        <script type="math/tex">Ent(D)=-\sum_{k=1}^{|y|}{p_k.\log{p_k}}</script></p>
-<p>上式为单调递减函数，且满足$p_1+p_2+\cdots+p_{|y|}=1$。因此，样本集合$D$的纯度越高，即类型越单一，信息熵的值越小。</p>
+<script type="math/tex; mode=display">Ent(D)=-\sum_{k=1}^{|y|}{p_k.\log{p_k}}​</script><p>上式为单调递减函数，且满足$p_1+p_2+\cdots+p_{|y|}=1$。因此，样本集合$D$的纯度越高，即类型越单一，信息熵的值越小。</p>
 <h3 id="信息增益"><a href="#信息增益" class="headerlink" title="信息增益"></a>信息增益</h3><p>信息增益决定了我们采用哪个属性来对样本集合进行划分，信息增益的定义如下：</p>
 <script type="math/tex; mode=display">Gain(D,a)=Ent(D)-\sum_{v=1}^{V}{\frac{|D^v|}{|D|}Ent(D^v)}</script><p>其中$a$表示某个属性，$Gain(D,a)$就是对属性$a$划分的信息增益，$|D|$表示数据集合样本的总体数量，$v=\lbrace1,2,\cdots,V \rbrace$表示属性$a$的$V$个取值，$|D^v|$表示属性$a$取值为$v$时的样本集合的子集；一般而言，信息增益越大，那么意味着使用属性$a$来划分所获得的纯度提升越大。因此，遍历所有属性分别计算信息增益，信息增益最大的属性将作为划分属性。</p>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"hello world!!!"</span>)</span><br></pre></td></tr></table></figure></div>
